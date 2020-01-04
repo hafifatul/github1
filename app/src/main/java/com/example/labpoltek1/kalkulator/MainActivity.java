@@ -51,5 +51,58 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    //bikin variabel
+                    int nilai1, nilai2, hasil;
+                    //mengambil nilai dari edittext
+                    nilai1 = Integer.parseInt(edt1.getText().toString());
+                    nilai2 = Integer.parseInt(edt2.getText().toString());
+
+                    hasil = nilai1 - nilai2;
+                    result.setText("hasil :" + hasil);
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this, "nilai yang anda masukkan salah!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnKali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    //bikin variabel
+                    int nilai1, nilai2, hasil;
+                    //mengambil nilai dari edittext
+                    nilai1 = Integer.parseInt(edt1.getText().toString());
+                    nilai2 = Integer.parseInt(edt2.getText().toString());
+
+                    hasil = nilai1 * nilai2;
+                    result.setText("hasil :" + hasil);
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this, "nilai yang anda masukkan salah!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        btnBagi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    //bikin variabel
+                    int nilai1, nilai2, hasil;
+                    //mengambil nilai dari edittext
+                    nilai1 = Integer.parseInt(edt1.getText().toString());
+                    nilai2 = Integer.parseInt(edt2.getText().toString());
+
+                    hasil = nilai1 / nilai2;
+                    result.setText("hasil :" + hasil);
+                }catch (Exception e){
+                    Toast.makeText(MainActivity.this, "nilai yang anda masukkan salah!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
